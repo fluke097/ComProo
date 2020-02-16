@@ -1,6 +1,9 @@
 package main
 
-import "sync"
+import (
+	"fmt"
+	"sync"
+)
 
 func main() {
 	total := 3
@@ -9,5 +12,6 @@ func main() {
 	for i := 1; i <= total; i++ {
 		go longConcurrentProcess(i, &wg)
 	}
-
+	wg.Wait()
+	fmt.Println("Finished")
 }
