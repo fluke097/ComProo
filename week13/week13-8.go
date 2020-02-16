@@ -23,7 +23,11 @@ func (wc WriteCounter) PrintProgress() {
 
 func main() {
 	fmt.Println("Download Started")
-	fileurl := "https://www.youtube.com/watch?v=ULIlTDrcAxg"
+	fileUrl := "https://www.youtube.com/watch?v=ULIlTDrcAxg"
 	err := DownloadFile("avatar.jpg", fileUrl)
-	id err != nil {}
+	id err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Download Finished")
 }
