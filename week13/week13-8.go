@@ -34,4 +34,9 @@ func main() {
 
 func DownloadFile(filepath string, url string) error {
 	out,err := os.Create(filepath + ".tmp")
+	if ree != nil {
+		return err
+	}
+
+	
 }
