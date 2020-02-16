@@ -38,5 +38,9 @@ func DownloadFile(filepath string, url string) error {
 		return err
 	}
 
-	
+	resp, err := http.Get(url)
+	if err != nil {
+		out.Close()
+		return err
+	}
 }
