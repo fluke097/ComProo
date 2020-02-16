@@ -2,7 +2,12 @@ package main
 
 import (
 	"fmt"
+	"io"
+	"net/http"
+	"os"
 	"strings"
+
+	"github.com/dustin/go-humanize"
 )
 
 type WriteCounter struct {
@@ -23,9 +28,9 @@ func (wc WriteCounter) PrintProgress() {
 
 func main() {
 	fmt.Println("Download Started")
-	fileUrl := "https://www.youtube.com/watch?v=ULIlTDrcAxg"
+	fileUrl := ""https://upload.wikimedia.org/wikipedia/commons/d/d6/Wp-w4-big.jpg""
 	err := DownloadFile("avatar.jpg", fileUrl)
-	id err != nil {
+	if err != nil {
 		panic(err)
 	}
 
@@ -33,8 +38,8 @@ func main() {
 }
 
 func DownloadFile(filepath string, url string) error {
-	out,err := os.Create(filepath + ".tmp")
-	if ree != nil {
+	out, err := os.Create(filepath + ".tmp")
+	if err != nil {
 		return err
 	}
 
