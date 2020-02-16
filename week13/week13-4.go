@@ -8,3 +8,7 @@ func main() {
 	myInt += 5
 	fmt.Println(myInt)
 }
+
+func ReturnData() interface{} {
+	return 5
+}
