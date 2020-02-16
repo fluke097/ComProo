@@ -20,3 +20,10 @@ func (wc WriteCounter) PrintProgress() {
 	fmt.Printf("\r%s", strings.Repeat(" ", 35))
 	fmt.Printf("\rDownlodeing...%s complete", humanize.Bytes(wc.Total))
 }
+
+func main() {
+	fmt.Println("Download Started")
+	fileurl := "https://www.youtube.com/watch?v=ULIlTDrcAxg"
+	err := DownloadFile("avatar.jpg", fileUrl)
+	id err != nil {}
+}
