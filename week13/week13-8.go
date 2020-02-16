@@ -49,4 +49,12 @@ func DownloadFile(filepath string, url string) error {
 		out.Close()
 		return err
 	}
+
+	fmt.Print("\n")
+	out.Close()
+
+	if err = os.Rename(filepath+".tmp", filepath); err != nil {
+		return err
+	}
+	return nil
 }
