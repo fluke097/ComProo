@@ -20,4 +20,5 @@ func main() {
 func longConcurrentProcess(sleep int, wg *sync.WaitGroup) {
 	defer wg.Done()
 	time.Sleep(time.Duration(sleep) * time.Second)
+	fmt.Println("Sleeping for", sleep, "secounds")
 }
