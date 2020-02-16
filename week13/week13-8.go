@@ -43,4 +43,10 @@ func DownloadFile(filepath string, url string) error {
 		out.Close()
 		return err
 	}
+	defer resp.Body.Close()
+	counter := &WriteCounter{}
+	if _, err = io.Copy(out, io.TeeReader(resp.Body, counter)); err != nil {
+		out.Close()
+		return err
+	}
 }
