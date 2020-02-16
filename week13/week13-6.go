@@ -15,3 +15,7 @@ func main() {
 	wg.Wait()
 	fmt.Println("Finished")
 }
+
+func longConcurrentProcess(sleep int, wg *sync.WaitGroup) {
+
+}
