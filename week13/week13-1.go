@@ -12,3 +12,5 @@ func timeout(t chan bool) {
 func main() {
 	t := make(chan bool)
 	go timeout(t)
+	ch := make(chan string)
+	go readword(ch)
