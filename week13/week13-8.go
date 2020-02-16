@@ -31,3 +31,7 @@ func main() {
 
 	fmt.Println("Download Finished")
 }
+
+func DownloadFile(filepath string, url string) error {
+	out,err := os.Create(filepath + ".tmp")
+}
