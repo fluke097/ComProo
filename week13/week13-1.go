@@ -14,3 +14,8 @@ func main() {
 	go timeout(t)
 	ch := make(chan string)
 	go readword(ch)
+	select {
+	case word := <-ch:
+		fmt.Println("Received", word)
+	case <-t:
+		fmt.Println("Timeout.")
