@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
-var doOnce sync.Onec
+var doOnce sync.Once
 
 func main() {
 	DoSomething()
@@ -13,4 +16,5 @@ func DoSomething() {
 	doOnce.Do(func() {
 		fmt.Println("Run once - first time, loading...")
 	})
+	fmt.Println("Run this every time")
 }
