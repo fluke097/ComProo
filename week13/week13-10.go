@@ -1,6 +1,8 @@
 package mainpackage main
+import "fmt"
+
 func main() {
-	myList := map[String]string{
+	myList := map[string]string{
 		"dog":       "woof",
 		"cat":       "meow",
 		"hedgenhog": "sniff",
