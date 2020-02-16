@@ -9,3 +9,6 @@ func readword(ch chan string) {
 func timeout(t chan bool) {
 	time.Sleep(5 * time.Second)
 	t <- false
+func main() {
+	t := make(chan bool)
+	go timeout(t)
