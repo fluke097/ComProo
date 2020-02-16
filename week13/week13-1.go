@@ -6,3 +6,6 @@ func readword(ch chan string) {
 	fmt.Scanf("%s", &word)
 	ch <- word
 }
+func timeout(t chan bool) {
+	time.Sleep(5 * time.Second)
+	t <- false
