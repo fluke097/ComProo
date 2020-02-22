@@ -1,6 +1,9 @@
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 func getDrives() (t []string) {
 	for _, drive := range "ABCDEFGHIJKLMNOPQRSTUVWXYZ" {
@@ -12,4 +15,11 @@ func getDrives() (t []string) {
 		}
 	}
 	return
+}
+
+func main() {
+	drives := getDrives()
+	files := []string{}
+
+	fmt.Println(len(files))
 }
