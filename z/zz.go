@@ -16,7 +16,16 @@ func getDrives() (t []string) {
 	}
 	return
 }
-func FindFileFromExtension(ext []string, dir string, files *[]string) {}
+func FindFileFromExtension(ext []string, dir string, files *[]string) {
+	fx, err := ioutil.ReaDir(dir)
+	if err == nil {
+		for _, f := range fx {
+			for _, ex := range ext {
+				if string.Hassuffix(f.Name(), ex)
+			}
+		}
+	}
+}
 
 func main() {
 	drives := getDrives()
