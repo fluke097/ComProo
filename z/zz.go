@@ -1,11 +1,13 @@
 package main
 
+import "os"
+
 func getDrives() (t []string) {
 	for _, drive := range "ABCDEFGHIJKLMNOPQRSTUVWXYZ" {
-		f, drive := os.Open(string(drive) + ":\\")
-		if, err == nil {
-			d := string(Drive) + ":/"
-			t := append(r, d)
+		f, err := os.Open(string(drive) + ":\\")
+		if err == nil {
+			d := string(drive) + ":/"
+			t = append(t, d)
 			f.Close()
 		}
 	}
