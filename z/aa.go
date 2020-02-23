@@ -11,4 +11,9 @@ func readCurrdntDir() {
 		fmt.Println(err)
 		return
 	}
+	err = f.Close()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 }
