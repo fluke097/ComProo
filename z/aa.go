@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 func readCurrdntDir() {
@@ -21,4 +22,9 @@ func readCurrdntDir() {
 func walkFn(path string, info os.FileInfo, err error) error {
 	fmt.Println(path)
 	return nil
+}
+
+func main() {
+	readCurrdntDir()
+	filepath.Walk("c:/", walkFn)
 }
